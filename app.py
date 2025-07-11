@@ -31,7 +31,7 @@ def list_alluser():
 
 @app.route('/')
 def user_register():
-    return render_template('register.html')
+    return render_template('/register.html')
 
 @app.route('/register', methods =['GET','POST'])
 def register_user():
@@ -44,7 +44,7 @@ def register_user():
         db.session.add(new_user)
         db.session.commit()
         # return "Data inserted."
-    return render_template('register.html')
+    return render_template('/register.html')
 
 @app.route('/updateuser/<int:id>')
 def updateuser(id):
